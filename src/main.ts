@@ -1,8 +1,9 @@
-import './assets/main.css'
+import 'reflect-metadata'
+import './ui/assets/styles/main.sass'
 
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import App from './ui/app/App.vue'
+import router from './ui/router'
 
 const app = createApp(App)
 
