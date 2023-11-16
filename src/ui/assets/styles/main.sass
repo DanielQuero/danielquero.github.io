@@ -1,6 +1,10 @@
 @import ./_variables.sass
 @import ./_breakpoints.sass
 @import ./animations.sass
+@import ./form.sass
+
+*
+  box-sizing: border-box
 
 body,
 div,
@@ -11,6 +15,7 @@ div::after
   font-weight: normal
 
 body
+  overflow-x: hidden
   min-height: 100vh
   color: var(--text-color)
   background-color: var(--background-color)
@@ -18,11 +23,45 @@ body
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
   font-size: 16px
   text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
 
 a
   color: var(--accent-color)
+  cursor: pointer
+
+.rotated
+  transform: rotate(180deg)
+.centered
+  text-align: center
+.primary-color
+  color: var(--main-color)
+
+.secondary-font-color
+  color: var(--secondary-color)
+.left-space
+  margir-left: 5px
+.right-space
+  margir-right: 5px
+
+.fill-primary
+  fill: var(--main-color)
+
+.xs-icon
+  width: 18px
+.sm-icon
+  width: 25px
+.md-icon
+  width: 32px
+.lg-icon
+  width: 40px
+.xl-icon
+  width: 50px
+
+.flex
+  display: flex
+.align-center
+  align-items: center
+.justify-center
+  justify-content: center
 
 .container, .bigger-container, .full-container-with-padding
   padding: 15px 20px
@@ -42,3 +81,17 @@ a
 .full-container-with-padding
   max-width: 100%
   min-width: 320px
+
+.section-title
+  color: var(--title-color)
+  text-align: center
+  font-size: 2.2em
+  margin-top: 0px
+  margin-bottom: 50px
+.wave-section-content
+  .section-title
+    color: var(--text-color-altered)
+
+@media (max-width: $tablet-breakpoint)
+  .section-title
+    font-size: 2em
