@@ -4,6 +4,7 @@ div.home
   about-me
   projects
   skills
+  contact-me
 
   rocket
 </template>
@@ -14,6 +15,7 @@ import FullHeader from './sections/fullHeader/FullHeader.vue'
 import AboutMe from './sections/aboutMe/AboutMe.vue'
 import Projects from './sections/projects/Projects.vue'
 import Skills from './sections/skills/Skills.vue'
+import ContactMe from './sections/contactMe/ContactMe.vue'
 import Rocket from '@/ui/components/rocket/Rocket.vue'
 
 @Component({
@@ -22,6 +24,7 @@ import Rocket from '@/ui/components/rocket/Rocket.vue'
 		AboutMe,
 		Projects,
 		Skills,
+		ContactMe,
 		Rocket,
 	},
 })
