@@ -96,8 +96,6 @@ export default class Projects extends Vue {
         font-weight: bold
         margin-bottom: 15px
         font-size: 23px
-      .tools
-        .tool
       .description
         text-wrap: balance
     .links
@@ -110,5 +108,4 @@ export default class Projects extends Vue {
           transition: .3s
           &:hover
             fill: #000
-        button
 </style>

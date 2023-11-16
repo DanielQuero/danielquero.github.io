@@ -27,12 +27,6 @@ export default class ParticlesCanvas extends Vue {
     if (this.canvasContext) {
       this.canvasContext.canvas.width = window.innerWidth
       this.canvasContext.canvas.height = window.innerHeight
-      // TODO: revisar esto (tercer apartado): https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
-      // const width = this.canvasContext.canvas.clientWidth
-      // const height = this.canvasContext.canvas.clientHeight
-
-      // this.canvasContext.canvas.width = width
-      // this.canvasContext.canvas.height = height
     }
   }
 

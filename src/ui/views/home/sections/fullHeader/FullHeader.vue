@@ -80,7 +80,6 @@ export default class FullHeader extends Vue {
       color: #FFF
       cursor: pointer
       .see-more-icon
-        // fill: #FFF
         width: 70px
 
 .bounce
