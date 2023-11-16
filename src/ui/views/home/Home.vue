@@ -3,6 +3,7 @@ div.home
   full-header
   about-me
   projects
+  skills
 
   rocket
 </template>
@@ -12,6 +13,7 @@ import { Component, Vue } from 'vue-facing-decorator'
 import FullHeader from './sections/fullHeader/FullHeader.vue'
 import AboutMe from './sections/aboutMe/AboutMe.vue'
 import Projects from './sections/projects/Projects.vue'
+import Skills from './sections/skills/Skills.vue'
 import Rocket from '@/ui/components/rocket/Rocket.vue'
 
 @Component({
@@ -19,6 +21,7 @@ import Rocket from '@/ui/components/rocket/Rocket.vue'
 		FullHeader,
 		AboutMe,
 		Projects,
+		Skills,
 		Rocket,
 	},
 })
