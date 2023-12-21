@@ -1,6 +1,6 @@
 <template lang="pug">
 wave-section
-  section.container(
+  section.bigger-container(
     v-motion
     :initial="{ opacity: 0, y: 50, transition: { delay: 200, duration: 500 } }"
     :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 500 } }"
@@ -36,22 +36,6 @@ import WaveSection from '@/ui/components/waveSection/WaveSection.vue'
 export default class Projects extends Vue {
   projects = [
     {
-      title: 'Movie Showtimes',
-      subtitle: '',
-      description: {
-        es: 'Cartelera',
-        en: 'Built following hexagonal architecture, "Movie Showtimes" is a peek into my coding skills. It fetches the latest movie data from The MovieDB API and showed in a clean and modern look.',
-      },
-      image: 'movie-showtimes_desktop.png',
-      mainTools: [
-        { name: 'Vue', icon: 'vue'},
-        { name: 'Hexagonal architecture', icon: 'hex_architecture'},
-        { name: 'typescript', icon: 'typescript'},
-      ],
-      demoUrl: 'https://danielquero.github.io/movie-showtimes',
-      codeSource: 'https://github.com/DanielQuero/movie-showtimes',
-    },
-    {
       title: 'Portfolio',
       subtitle: '',
       description: {
@@ -63,25 +47,58 @@ export default class Projects extends Vue {
         { name: 'Vue', icon: 'vue'},
         { name: 'typescript', icon: 'typescript'},
       ],
-      demoUrl: 'https://danielquero.github.io/danielquero.github.io',
+      demoUrl: 'https://danielquero.github.io/',
       codeSource: 'https://github.com/DanielQuero/danielquero.github.io',
+    },
+    {
+      title: 'Movie Showtimes',
+      subtitle: '',
+      description: {
+        es: 'Cartelera',
+        en: 'Built following hexagonal architecture, it is a peek into my coding skills. It fetches the latest movie data from The MovieDB API and showed in a clean and modern look.',
+      },
+      image: 'movie-showtimes_desktop.png',
+      mainTools: [
+        { name: 'Vue', icon: 'vue'},
+        { name: 'Hexagonal architecture', icon: 'hex_architecture'},
+        { name: 'typescript', icon: 'typescript'},
+      ],
+      demoUrl: 'https://danielquero.github.io/movie-showtimes',
+      codeSource: 'https://github.com/DanielQuero/movie-showtimes',
+    },
+    {
+      title: 'Guess the pokemon',
+      subtitle: '',
+      description: {
+        es: '',
+        en: `A pokemon quiz created for fun to recreate the famous game "Guess the pokemon" that appeared on every pokemon episode, and my first time using tailwind.`,
+      },
+      image: 'guess-the-pokemon_desktop.png',
+      mainTools: [
+        { name: 'Vue', icon: 'vue'},
+        { name: 'typescript', icon: 'typescript'},
+      ],
+      demoUrl: 'https://danielquero.github.io/guess-the-pokemon',
+      codeSource: 'https://github.com/DanielQuero/guess-the-pokemon',
     },
   ]
 }
 </script>
 
 <style lang="sass" scoped>
+@import '@/ui/assets/styles/_breakpoints.sass'
+
 .projects-list
   display: flex
-  align-items: stretch
-  justify-content: center
   flex-wrap: wrap
-  gap: 30px
+  justify-content: center
+  gap: 10px
   .project-card
-    flex: 1
+    flex: 1 1 250px
+    max-width: calc(50% - 10px)
+    min-width: 250px
     display: flex
     flex-direction: column
-    min-width: 250px
     min-height: 70px
     padding: 10px
     border-radius: 10px
@@ -108,4 +125,9 @@ export default class Projects extends Vue {
           transition: .3s
           &:hover
             fill: #000
+
+@media (max-width: $mobile-breakpoint)
+  .projects-list
+    .project-card
+      max-width: 100%
 </style>
